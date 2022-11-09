@@ -19,7 +19,7 @@ export default function Home({Menu}) {
 
       <Sidebar>
         <div className="Menu-List">
-          {Menu.map((item) =>{
+          {Menu.map((item,i) =>{
             return (
               <Link href="/" key={i}>
                 <div className="Menu-Choice">
@@ -43,7 +43,7 @@ export default function Home({Menu}) {
 }
 
 export const getServerSideProps = async () =>{
-      const  res = await fetch("http://localhost:5000/menu/getAllMenu",{method:'GET'}) 
+      const  res = await fetch("https://point-of-sale-backend.vercel.app/menu/getAllmenu",{method:'GET'}) 
       const data = await res.json()
       return {
         props : {Menu : data}
