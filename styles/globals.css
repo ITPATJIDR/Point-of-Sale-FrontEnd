@@ -1,0 +1,172 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+aside {
+  width: 20%;
+  height: 100%;
+  font-size: bold;
+  background-color: #730303;
+  position: fixed; 
+  color: white;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  scrollbar-width: thin;
+  top:0;
+  bottom:0;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: black;
+    background: white;
+  }
+}
+
+.Content-Main{
+  margin-left: 25%;
+  margin-top: 2%;
+}
+
+.Sidebar-Link{
+  display: flex;
+  width: 95%;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 5px;
+  margin-right: 10px;
+  transition: 0.8s;
+}
+.Sidebar-Link:hover {
+  display: flex;
+  width: 100%;
+  padding: 10px;
+  background-color: #BF0606;
+  border-radius: 5px;
+  margin: 5px;
+  margin-right: 10px;
+  transition: 0.8s;
+}
+
+
+.Sidebar-Link p{
+  margin-left: 40px;
+  font-weight: bold; 
+}
+
+.Menu-List{
+  display: flex
+}
+
+.Menu-Choice{
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    background-color: #F20707;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    text-align: center;
+}
+
+.Menu-Name{
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.Main-login-page{
+  width: 100%;
+  height: 884px;
+  background-color: #621313;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Login-page-header p{
+  font-size: 80px;
+  font-weight: bold;
+  color: white;
+}
+
+.Login-box-Header p{
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
+
+.Login-box{
+  width: 350px;
+  height: 350px;
+  background-color: #951818;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Login-box-userinput p{
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+}
+
+.Login-box-username,
+.Login-box-password{
+  width: 250px;
+  height: 25px;
+  background-color: white;
+  color: black;
+  outline: none;
+  border:none;
+  border-radius: 2px;
+}
+
+.Login-box-button{
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.Login-box-submit{
+  width: 250px;
+  height: 50px;
+  border-radius: 5px;
+  border:none;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.Login-box-submit:hover{
+  width: 250px;
+  height: 50px;
+  border-radius: 10px;
+  border:none;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.8s;
+}
+
+
