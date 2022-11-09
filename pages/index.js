@@ -21,7 +21,7 @@ export default function Home({Menu}) {
         <div className="Menu-List">
           {Menu.map((item) =>{
             return (
-              <Link href="/">
+              <Link href="/" key={i}>
                 <div className="Menu-Choice">
                   <div className="Menu-Image">
                     <Image src="https://cdn.mygingergarlickitchen.com/images/800px/800px-Food-Styling-indian-roti-recipe-phulka-chapati-Pinterest.jpg" width="200" height="200" alt="Roti"/>
