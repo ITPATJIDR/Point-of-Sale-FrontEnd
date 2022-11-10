@@ -155,18 +155,28 @@ a {
   height: 50px;
   border-radius: 5px;
   border:none;
+  color: black;
   font-weight: bold;
   font-size: 20px;
+  background-color: white;
 }
 
 .Login-box-submit:hover{
   width: 250px;
   height: 50px;
   border-radius: 10px;
+  background-color: rgb(131, 49, 49);
+  color: white;
   border:none;
   font-weight: bold;
   font-size: 20px;
   transition: 0.8s;
+}
+
+
+.Login-box-alert{
+  font-weight: bold;
+  
 }
 
 

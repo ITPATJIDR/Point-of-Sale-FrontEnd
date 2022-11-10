@@ -14,7 +14,7 @@ const Sidebar = ({children}) =>{
 						<p>Menu</p>
 					</div>
 				</Link>
-				<Link href="/">
+				<Link href="/test">
 					<div className="Sidebar-Link">
 						<FontAwesomeIcon icon={faBars} style={{width:50,height:50}} color="white" /> 
 						<p>Choose Menu</p>
