@@ -22,10 +22,10 @@ export default function Home({Menu}) {
         <div className="Menu-List">
           {Menu.map((item,i) =>{
             return (
-              <Link href="/" key={i}>
+              <Link href={`/menu/${item._id}`} key={i}>
                 <div className="Menu-Choice">
-                  <div className="Menu-Image">
-                    <Image src="https://cdn.mygingergarlickitchen.com/images/800px/800px-Food-Styling-indian-roti-recipe-phulka-chapati-Pinterest.jpg" width="200" height="200" alt="Roti"/>
+                  <div>
+                    <Image className="Menu-Image" src="https://cdn.mygingergarlickitchen.com/images/800px/800px-Food-Styling-indian-roti-recipe-phulka-chapati-Pinterest.jpg" width="200" height="200" alt="Roti"/>
                   </div>
                     <div className="Menu-Name">
                       <p key={item._id}>{item.MenuName}</p>
@@ -44,9 +44,14 @@ export default function Home({Menu}) {
 }
 
 export const getServerSideProps = async () =>{
+    try{
       const  res = await fetch("https://point-of-sale-backend.vercel.app/menu/getAllmenu",{method:'GET'}) 
       const data = await res.json()
       return {
         props : {Menu : data}
       } 
+    }catch(e) {
+      console.log(e.message)
+      return null;
+    }
 } 

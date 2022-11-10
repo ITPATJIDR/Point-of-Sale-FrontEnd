@@ -91,6 +91,10 @@ a {
     text-align: center;
 }
 
+.Menu-Image{
+  border-radius: 10px
+}
+
 .Menu-Name{
   font-weight: bold;
   font-size: 20px;
@@ -176,7 +180,7 @@ a {
 
 .Login-box-alert{
   font-weight: bold;
-  
+  color: white; 
 }
 
 
