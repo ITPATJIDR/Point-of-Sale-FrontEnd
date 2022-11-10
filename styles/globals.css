@@ -102,11 +102,12 @@ a {
 
 .Main-login-page{
   width: 100%;
-  height: 884px;
+  height: 100%;
   background-color: #621313;
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: absolute;
 }
 
 .Login-page-header p{
@@ -163,6 +164,7 @@ a {
   font-weight: bold;
   font-size: 20px;
   background-color: white;
+  transition: 0.1s;
 }
 
 .Login-box-submit:hover{
@@ -174,13 +176,48 @@ a {
   border:none;
   font-weight: bold;
   font-size: 20px;
-  transition: 0.8s;
+  transition: 0.1s;
 }
 
 
 .Login-box-alert{
   font-weight: bold;
   color: white; 
+}
+
+.Main-Choose-Menu{
+  display: flex;
+}
+
+.Choose-Menu-Image{
+  width: 500px;
+  height: 400px;
+  background: #F20707;
+  border-radius: 20px;
+  padding: 85px 150px;
+  margin: 180px;
+}
+
+.Choose-Menu-Name{
+  text-align: center;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.Choose-ExtraMenu{
+  width: 30%;
+  height: 100%;
+  background: #730303;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  padding: 100px;
+}
+
+.ExtraMenuName{
+  font-size: 30px; 
+  font-weight: bold;
+  color: #fff;
 }
 
 
