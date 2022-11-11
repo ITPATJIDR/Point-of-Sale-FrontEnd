@@ -208,16 +208,104 @@ a {
   width: 30%;
   height: 100%;
   background: #730303;
-  position: absolute;
+  position: fixed;
   right: 0px;
   top: 0px;
   padding: 100px;
 }
 
+.Choose-ExtraMenu-Button{
+  width: 400px;
+  height: 70px;
+  border-radius: 20px;
+  border: none;
+  background-color: #F20707;
+  font-weight: bold;
+  font-size: 30px;
+  position: fixed;
+  bottom: 80px;
+}
+
+.Choose-ExtraMenu-Button:hover{
+  width: 400px;
+  height: 70px;
+  border-radius: 20px;
+  border: none;
+  background-color: #c70b0b;
+  font-weight: bold;
+  font-size: 30px;
+  transition: 0.5s;
+}
+
 .ExtraMenuName{
-  font-size: 30px; 
+  font-size: 28px;
   font-weight: bold;
   color: #fff;
+}
+
+.Render-ExtraMenu{
+  width: 500px;
+  height: 100%;
+  padding:20px;
+}
+
+
+.ListMenu{
+  display: flex;
+  width: 400px;
+  background-color: white;
+  border-radius: 10px;
+  height: 90px;
+  justify-content: space-between;
+  color: black;
+}
+
+.ListMenu-Choose{
+  padding: 0px 160px 0px 15px;
+  width: 100%;
+}
+
+.ListMenu-Button{
+    width: 100px;
+    height: 90px;
+    background: #BF0606;
+    border-radius: 10px;
+    padding-top: 18px;
+    text-align: center;
+    transition: 0.5s
+}
+
+.ListMenu-Button:hover{
+    width: 100px;
+    height: 90px;
+    background: #8c0303;
+    border-radius: 10px;
+    padding-top: 18px;
+    text-align: center;
+    transition: 0.5s
+}
+
+.Main-Menu-List{
+    width: 400px;
+    background: white;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 5px;
+    color: black;
+    position: fixed;
+}
+
+.ExtraMenu-List{
+    padding: 10px;
+    margin: 5px
+}
+
+.ExtraMenu-List:hover{
+    padding: 10px;
+    margin: 5px;
+    background: rgb(181, 178, 178);
+    transition: 0.5s;
+    border-radius: 10px;
 }
 
 
