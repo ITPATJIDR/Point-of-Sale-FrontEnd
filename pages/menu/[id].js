@@ -1,29 +1,43 @@
 import React, {useState} from 'react';
+import {useRouter} from 'next/router';
 import {useAuth} from "../../context/AuthContext"
 import LoginPage from '../../Components/LoginPage';
 import Sidebar from '../../Components/Parent';
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
-import { faCaretDown, faCaretUp } from '@fortawesome/free-solid-svg-icons';
 import Image from 'next/image';
+import Select from 'react-select';
 
-const MenuList = ({item,setChooseMenu}) =>{
-	return(
-		<div className="Main-Menu-List">
-			{item.ListMenu.map((item,i)=>{
-				return(
-					<div key={i} className="ExtraMenu-List" onClick={(e) => setChooseMenu(item.Name)}>{item.Name}</div>
-				)
-			})}
-		</div>
-	)
-}
 
 const Menu = ({menu}) =>{
 
 	const {auth,setAuth} = useAuth();
-	const [chooseMenu,setChooseMenu] = useState();
-	const [toggle,setToggle] = useState(false);
-	const toggleChecked = () => setToggle(value => !value);
+	const [extraMenu,setExtraMenu] = useState()
+	const value = [];
+	const router = useRouter();
+
+	const handleSubmit = (e) =>{
+		const data  = {
+			OrderName: menu.MenuName,
+			ChooseMenu: extraMenu,
+			OrderPrice: menu.MainPrice
+		} 
+		const res = fetch("http://localhost:5000/order/addOrder",{
+			method: "POST",
+			headers: {
+				'Content-Type': 'application/json'
+			},
+			body:JSON.stringify(data)
+		}) 
+		router.push('/')
+	}
+
+	const handleChange = (e) =>{
+		const options = e;
+		const ExtraMenuCount = menu.ExtraMenu.length;
+		value.push(options)
+		if (value.length >= ExtraMenuCount){
+			setExtraMenu(value)
+		}
+	}
 
 	return (
 		<div>
@@ -43,21 +57,12 @@ const Menu = ({menu}) =>{
 									<div key={i} className="ExtraMenuName">
 										<p>{item.ExtraMenuName}</p>
 										<div className="ListMenu">
-											<div className="ListMenu-Choose">
-												<p>{chooseMenu}</p>
-											</div>
-											<div className="ListMenu-Button" onClick={toggleChecked}>
-												{toggle 
-												? <FontAwesomeIcon icon={faCaretUp} style={{width:50,height:50}} color="#730303" /> 
-												: <FontAwesomeIcon icon={faCaretDown} style={{width:50,height:50}} color="#730303" />
-												}
-											</div>
+											<Select key={i} className="ListMenu-Choose" options={item.ListMenu.map(e =>({ label: e.Name, value: e.Price}))} onChange={(e) => handleChange(e)} />
 										</div>
-										{toggle ?  <MenuList item={item} setChooseMenu={setChooseMenu}/> : null}
 									</div>
 								)
 							})}
-							<button type="Submit" className="Choose-ExtraMenu-Button">Submit</button>
+							<button type="Submit" disabled={extraMenu ? false:true} className="Choose-ExtraMenu-Button" onClick={handleSubmit}>Submit</button>
 						</div>
 					</div>
 				</div>
@@ -70,7 +75,7 @@ const Menu = ({menu}) =>{
 export const getServerSideProps = async (context) =>{
 	try{
 		const MenuId = {id:context.query.id}
-		const res = await fetch("http://localhost:5000/menu/getMenu",{
+		const res = await fetch("https://point-of-sale-backend.vercel.app/menu/getMenu",{
 			method: "POST",
 			headers: {
 				'Content-Type': 'application/json'

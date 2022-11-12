@@ -249,20 +249,15 @@ a {
   padding:20px;
 }
 
-
-.ListMenu{
-  display: flex;
-  width: 400px;
-  background-color: white;
-  border-radius: 10px;
-  height: 90px;
-  justify-content: space-between;
-  color: black;
-}
-
 .ListMenu-Choose{
   padding: 0px 160px 0px 15px;
-  width: 100%;
+  width: 500px;
+  border-radius: 10px;
+  border:none;
+  outline:none;
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
 }
 
 .ListMenu-Button{
@@ -285,27 +280,7 @@ a {
     transition: 0.5s
 }
 
-.Main-Menu-List{
-    width: 400px;
-    background: white;
-    border-radius: 10px;
-    padding: 10px;
-    margin-top: 5px;
-    color: black;
-    position: fixed;
-}
 
-.ExtraMenu-List{
-    padding: 10px;
-    margin: 5px
-}
 
-.ExtraMenu-List:hover{
-    padding: 10px;
-    margin: 5px;
-    background: rgb(181, 178, 178);
-    transition: 0.5s;
-    border-radius: 10px;
-}
 
 
