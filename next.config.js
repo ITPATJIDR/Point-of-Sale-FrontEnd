@@ -2,7 +2,9 @@
 const nextConfig = {
   reactStrictMode: true,
   images:{
-    domains: ['cdn.mygingergarlickitchen.com']
+    domains: ['cdn.mygingergarlickitchen.com',
+    'as1.ftcdn.net'
+  ]
   }
 }
 

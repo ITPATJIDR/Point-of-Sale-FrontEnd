@@ -32,7 +32,7 @@ const Sidebar = ({children}) =>{
 						<p>Dashboard</p>
 					</div>
 				</Link>
-				<Link href="/">
+				<Link href="/orderLists">
 					<div className="Sidebar-Link">
 						<FontAwesomeIcon icon={faShoppingCart} style={{width:50,height:50}} color="white" /> 
 						<p>Order List</p>

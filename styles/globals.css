@@ -261,25 +261,132 @@ a {
 }
 
 .ListMenu-Button{
-    width: 100px;
-    height: 90px;
-    background: #BF0606;
-    border-radius: 10px;
-    padding-top: 18px;
-    text-align: center;
-    transition: 0.5s
+  width: 100px;
+  height: 90px;
+  background: #BF0606;
+  border-radius: 10px;
+  padding-top: 18px;
+  text-align: center;
+  transition: 0.5s
 }
 
 .ListMenu-Button:hover{
-    width: 100px;
-    height: 90px;
-    background: #8c0303;
-    border-radius: 10px;
-    padding-top: 18px;
-    text-align: center;
-    transition: 0.5s
+width: 100px;
+height: 90px;
+  background: #8c0303;
+  border-radius: 10px;
+  padding-top: 18px;
+  text-align: center;
+  transition: 0.5s
 }
 
+.Main-OrderList{
+  height: 800px;
+  position: relative;
+}
+
+.OrderList-Image{
+  width: 400px;
+  height: 400px;
+  background: #F20707;
+  text-align: center;
+  padding-top: 95px;
+  border-radius: 20px;
+  position: absolute;
+  top: 180px;
+  left: 400px;
+}
+
+.OrderList-List{
+  position: fixed;
+  right: 0px;
+  background: #730303;
+  width: 25%;
+  top: 0px;
+  height: 973px;
+}
+
+.OrderList-Header{
+  background: #BF0606;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+  font-size: 35px;
+  font-weight: bold;
+  color: white;
+}
+
+.OrderList-Body{
+  padding: 20px;
+}
+
+
+.ListOrder-Header{
+  display: flex;
+  height: 80px;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 25px;
+  font-weight: bold;
+  color: white
+}
+
+.ListOrder-ChooseMenu{
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
+
+.ListOrder{
+  background: #5c0404;
+  min-height: 150px;
+  padding: 0px 25px;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.ListOrder-Footer-1{
+  height: 100px;
+  background: #BF0606;
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+  padding: 30px;
+  font-size: 35px;
+  color: white;
+  font-weight: bold;
+  margin-top: 50px;
+}
+
+.ListOrder-Footer-2{
+  display: flex;
+  height: 130px;
+  background: #F20707;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 50px;
+  font-weight: bold;
+  color: white;
+  padding: 19px;
+  transition: 0.5s;
+}
+
+.ListOrder-Footer-2:hover{
+  display: flex;
+  height: 130px;
+  background: #c10707;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 50px;
+  font-weight: bold;
+  color: white;
+  padding: 19px;
+  transition: 0.5s;
+}
 
 
 

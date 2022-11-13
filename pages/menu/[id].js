@@ -20,7 +20,7 @@ const Menu = ({menu}) =>{
 			ChooseMenu: extraMenu,
 			OrderPrice: menu.MainPrice
 		} 
-		const res = fetch("http://localhost:5000/order/addOrder",{
+		const res = fetch("https://point-of-sale-backend.vercel.app/order/addOrder",{
 			method: "POST",
 			headers: {
 				'Content-Type': 'application/json'
