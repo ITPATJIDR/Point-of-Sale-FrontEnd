@@ -1,10 +1,10 @@
 import React from 'react';
 
 
-const comingSoon = () =>{
+const ComingSoon = () =>{
 	return (
 		<div>Coming Soon</div>
 	)
 }
 
-export default comingSoon;
+export default ComingSoon;

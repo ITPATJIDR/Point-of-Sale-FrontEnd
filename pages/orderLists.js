@@ -6,7 +6,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 import {faB} from "@fortawesome/free-solid-svg-icons";
 import Image from 'next/image'
 
-const orderLists = ({order}) =>{
+const OrderLists = ({order}) =>{
 	const {auth,setAuth} = useAuth(); 
 	const countOrder = order.length
 	return (
@@ -76,4 +76,4 @@ export const getServerSideProps = async () =>{
 	}
 }
 
-export default orderLists
+export default OrderLists
