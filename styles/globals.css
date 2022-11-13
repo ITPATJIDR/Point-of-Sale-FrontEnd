@@ -320,6 +320,8 @@ height: 90px;
 
 .OrderList-Body{
   padding: 20px;
+  overflow: auto;
+  height: 645px;
 }
 
 
@@ -359,7 +361,6 @@ height: 90px;
   font-size: 35px;
   color: white;
   font-weight: bold;
-  margin-top: 50px;
 }
 
 .ListOrder-Footer-2{
@@ -387,6 +388,10 @@ height: 90px;
   padding: 19px;
   transition: 0.5s;
 }
+
+
+
+
 
 
 
