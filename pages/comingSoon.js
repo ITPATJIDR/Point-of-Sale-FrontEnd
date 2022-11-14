@@ -1,9 +1,12 @@
 import React from 'react';
+import Sidebar from '../Components/Parent'
 
 
 const ComingSoon = () =>{
 	return (
-		<div>Coming Soon</div>
+		<Sidebar>
+			<div>Coming Soon</div>
+		</Sidebar>
 	)
 }
 

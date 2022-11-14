@@ -14,19 +14,19 @@ const Sidebar = ({children}) =>{
 						<p>Menu</p>
 					</div>
 				</Link>
-				<Link href="/">
+				<Link href="/comingSoon">
 					<div className="Sidebar-Link">
 						<FontAwesomeIcon icon={faBars} style={{width:50,height:50}} color="white" /> 
 						<p>Choose Menu</p>
 					</div>
 				</Link>
-				<Link href="/">
+				<Link href="/comingSoon">
 					<div className="Sidebar-Link">
 						<FontAwesomeIcon icon={faCheck} style={{width:50,height:50}} color="white" /> 
 						<p>Current Order</p>
 					</div>
 				</Link>
-				<Link href="/">
+				<Link href="/comingSoon">
 					<div className="Sidebar-Link">
 						<FontAwesomeIcon icon={faCalendarDay} style={{width:50,height:50}} color="white" /> 
 						<p>Dashboard</p>
@@ -38,25 +38,25 @@ const Sidebar = ({children}) =>{
 						<p>Order List</p>
 					</div>
 				</Link>
-				<Link href="/">
+				<Link href="/comingSoon">
 					<div className="Sidebar-Link">
 						<FontAwesomeIcon icon={faBars} style={{width:50,height:50}} color="white" /> 
 						<p>Queue List</p>
 					</div>
 				</Link>
-				<Link href="/">
+				<Link href="/comingSoon">
 					<div className="Sidebar-Link">
 						<FontAwesomeIcon icon={faInbox} style={{width:50,height:50}} color="white" /> 
 						<p>IC</p>
 					</div>
 				</Link>
-				<Link href="/">
+				<Link href="/comingSoon">
 					<div className="Sidebar-Link">
 						<FontAwesomeIcon icon={faCartPlus} style={{width:50,height:50}} color="white" /> 
 						<p>Add Menu</p>
 					</div>
 				</Link>
-				<Link href="/">
+				<Link href="/comingSoon">
 					<div className="Sidebar-Link">
 						<FontAwesomeIcon icon={faNetworkWired} style={{width:50,height:50}} color="white" /> 
 						<p>Branch</p>

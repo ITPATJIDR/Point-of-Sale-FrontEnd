@@ -1,5 +1,6 @@
 import React from 'react';
 import {useAuth} from "../context/AuthContext"
+import {useRouter} from 'next/router'
 import LoginPage from "../Components/LoginPage"
 import Sidebar from '../Components/Parent';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
@@ -7,8 +8,23 @@ import {faB} from "@fortawesome/free-solid-svg-icons";
 import Image from 'next/image'
 
 const OrderLists = ({order}) =>{
+
 	const {auth,setAuth} = useAuth(); 
 	const countOrder = order.length
+	const priceArray = []
+	const router = useRouter();
+
+	order.map((item,i)=>{
+		item.ChooseMenu.map((item) => priceArray.push(item.value))
+		priceArray.push(item.OrderPrice)
+	})
+	const sumPrice = (priceArray.reduce((a,b)=> a+b,0))
+
+	const handleSubmit = () =>{
+		const res = fetch("https://point-of-sale-backend.vercel.app/order/deleteAllOrder")
+		router.push('/')
+	}
+
 	return (
 		<div>
 			{auth ?
@@ -46,11 +62,11 @@ const OrderLists = ({order}) =>{
 								})}
 							</div>
 							<div className="ListOrder-Footer-1">
-								<p>ราคา 130</p>
+								<p>ราคา {sumPrice}</p>
 							</div>
 
-							<div className="ListOrder-Footer-2">
-								<p>130</p>
+							<div className="ListOrder-Footer-2" onClick={handleSubmit}>
+								<p>{sumPrice}</p>
 								<FontAwesomeIcon icon={faB} style={{width:50,height:50}} color="white"/>
 							</div>
 						</div>
