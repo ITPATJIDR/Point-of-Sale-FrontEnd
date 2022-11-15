@@ -1,5 +1,8 @@
 # POS : Point of Sale 
 
+__POS Backend__:
+- https://github.com/ITPATJIDR/Point-of-Sale-Backend
+
 __Feature__
 
 - Login (Coming Soon)
