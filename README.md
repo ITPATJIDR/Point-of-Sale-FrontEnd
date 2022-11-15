@@ -1,4 +1,4 @@
-# POS : Point of Sale 
+# POS : Point of Sale Frontend 
 
 __POS Backend__:
 - https://github.com/ITPATJIDR/Point-of-Sale-Backend
