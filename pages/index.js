@@ -45,10 +45,9 @@ export default function Home({Menu}) {
 
 export const getServerSideProps = async () =>{
     try{
-      const  res = await fetch("https://point-of-sale-backend.vercel.app/menu/getAllmenu",{method:'GET'}) 
-      const data = await res.json()
+      const res = await axios.get("https://point-of-sale-backend.vercel.app/menu/getAllmenu",{method:'GET'}) 
       return {
-        props : {Menu : data}
+        props : {Menu : res.data}
       } 
     }catch(e) {
       console.log(e.message)

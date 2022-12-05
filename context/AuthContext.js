@@ -1,6 +1,6 @@
 import React, {createContext, useContext ,useState} from "react"
 
-export const AuthContext = React.createContext()
+export const AuthContext = React.createContext(false)
 
 export const useAuth = () => useContext(AuthContext)
 
